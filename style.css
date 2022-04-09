@@ -1,26 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+    --buttonColor: #FB3640;
+    --fontColor: #FEE1C7;
+    --backgroundColor: #252627;
+}
+
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    color: var(--fontColor);
+    font-family: 'Montserrat', sans-serif;
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-}
-
-.container {
-    height: 100vh;
+.content {
     width: 100vw;
+    height: 100vh;
 }
 
-.container, .logo {
+.content, .logo {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: row wrap;
 }
 
-.background-picture {
-    background-image: url('images/background-picture.jpg');
+/* left side */
+
+.picture {
+    background-image: url(images/background-picture.jpg);
     background-position: center;
     background-size: auto;
     background-repeat: no-repeat;
@@ -29,7 +35,7 @@ body {
 
 .logo {
     height: auto;
-    background-color: rgba(0, 0, 0, 0.581);
+    background-color: rgba(0, 0, 0, 0.637);
     position: relative;
     top: 20vh;
     gap: 1vw;
@@ -43,11 +49,101 @@ h1 {
     color: white;
 }
 
-.greeting {
+.odin-image {
     height: 10vh;
 }
 
+
+/* right side */
+
 .right {
     width: 60vw;
+    background-color: var(--backgroundColor);
+    display: flex;
+    flex-flow: column ;
+    justify-content: center;
 }
 
+.left {
+    padding-left: 3vw;
+}
+
+.dummy-text {
+    font-weight: 500;
+    width: 90%;
+    font-size: 1.2rem;
+}
+
+.remote-text {
+    margin: 40px 0px 80px;
+}
+
+/* form section */
+.form {
+    background-color: #131414;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.input {
+    display: flex;
+    flex-flow: column wrap;
+    width: 40%;
+    font-size: 0.8 rem;
+    text-transform: uppercase;
+    opacity: 50%;
+}
+.form-title {
+    width: 100%;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+    font-weight: 800;
+}
+
+input {
+    background-color: #131414;
+    color: var(--fontColor);
+    font-weight: 700;
+    font-size: 1.2rem;
+    border: 1px solid var(--fontColor);
+    border-radius: 1000px;
+    padding: 10px 40px;
+    margin: 10px 0px;
+}
+
+button {
+    background-color: #131414;
+    color: var(--buttonColor);
+    border: 1px solid var(--buttonColor);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 1000px;
+    padding: 10px 30px;
+    margin: 40px 0px;
+}
+
+button:hover {
+    background-color: var(--buttonColor);
+    color: #131414;
+    border: 1px solid var(--buttonColor);
+}
+
+.log-in {
+    display: flex;
+    gap: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--fontColor);
+    font-weight: 600;
+}
+
+a:hover {
+    color: cadetblue;
+    text-decoration: underline;
+}
